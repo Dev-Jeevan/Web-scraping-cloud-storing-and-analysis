@@ -1,0 +1,37 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>Please enter the below details to add a movie </h3> <br><br><br>
+<form method="POST" action="{{url_for('add_movie')}}">
+    <div class="form-group">
+        <label for="usr">Film Title:</label>       
+        <input type="text" class="form-control" name="FilmTitle" id="FilmTitle">
+    </div>
+    <div class="form-group">
+        <label for="usr">IMDB Rating:</label>       
+        <input type="text" class="form-control" name="IMDBRating" id="IMDBRating">
+    </div>
+    <div class="form-group">
+        <label for="usr">Run Time:</label>       
+        <input type="text" class="form-control" name="RunTime" id="RunTime">
+    </div>
+    <div class="form-group">
+        <label for="usr">Genre:</label>       
+        <input type="text" class="form-control" name="Genre" id="Genre">
+    </div>
+    <div class="form-group">
+        <label for="usr">Short Narration:</label>       
+        <input type="text" class="form-control" name="ShortNarration" id="ShortNarration">
+    </div>
+    <div class="form-group">
+        <label for="usr">Director:</label>       
+        <input type="text" class="form-control" name="Director" id="Director">
+    </div>
+    <div class="form-group">
+       
+    </div>
+
+    <p><input class="btn btn-primary" type="submit" value="Add movie">
+</form>
+{% endblock %}
