@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form action="{{url_for('edit', id=movie._id)}}" method="post">   
+<h3>Edit the movie details</h3>
+<br>
+<br>
+
+<table class="table table-striped">
+    <tr>
+      <th>Film Title</th>
+      <th>IMDB Rating</th>   
+      <th>Run Time</th>      
+      <th>Genre</th>
+      <th>Short Narration</th>
+      <th>Director</th>
+      <th></th>
+      <th></th>
+    </tr>
+    
+      <tr>
+        <td>
+            <input type="text" class="form-control" name="FilmTitle" id="FilmTitle" value="{{movie['Film Title']}}">
+        </td>
+        <td>
+            <input type="text" class="form-control" name="IMDBRating" id="IMDBRating" value="{{movie['IMDB Rating']}}">
+        </td>
+        <td>
+            <input type="text" class="form-control" name="RunTime" id="RunTime" value="{{movie['Run Time']}}">
+        </td>
+        <td><input type="text" class="form-control" name="Genre" id="Genre" value="{{movie.Genre}}"></td>
+        <td>
+            <input type="text" class="form-control" name="ShortNarration" id="ShortNarration" value="{{movie['Short Narration']}}">
+        </td>
+        <td>
+            <input type="text" class="form-control" name="Director" id="Director" value="{{movie.Director}}">
+        </td>
+        <td>                       
+            <input type="submit" value="Save" class="btn btn-default pull-right">
+           
+        </td>
+
+      </tr>
+      
+  </table>
+</form>
+{% endblock %}
